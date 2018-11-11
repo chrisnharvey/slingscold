@@ -27,7 +27,7 @@ public class SlingshotWindow : ElementaryWidgets.CompositedWindow {
         this.set_type_hint (Gdk.WindowTypeHint.NORMAL);
         this.maximize ();
         this.stick ();
-        this.set_keep_above (true);
+        this.set_keep_above (false);
         
         // Set icon size
         Gdk.Rectangle monitor_dimensions;

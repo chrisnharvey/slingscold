@@ -7,7 +7,6 @@ namespace ElementaryWidgets {
             //Window properties
             this.skip_taskbar_hint = false; // sin taskbar
             this.decorated = false; // sin decoracion de ventanas
-			this.fullscreen(); //pantalla completa
             this.app_paintable = true;
             
             this.set_default_colormap (this.get_screen ().get_rgba_colormap () ?? this.get_screen ().get_rgb_colormap ());

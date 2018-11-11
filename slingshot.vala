@@ -117,9 +117,7 @@ public class SlingshotWindow : ElementaryWidgets.CompositedWindow {
         this.pages.set_active (0);
         
         // Signals and callbacks
-        this.button_release_event.connect ( () => { this.destroy(); return false; });
         this.expose_event.connect (this.draw_background);
-        this.focus_out_event.connect ( () => { this.destroy(); return true; } ); // close slingshot when the window loses focus
     }
     
     private void populate_grid () {        
@@ -138,7 +136,6 @@ public class SlingshotWindow : ElementaryWidgets.CompositedWindow {
                     
                     try {
                         new GLib.DesktopAppInfo.from_filename (this.filtered.get((int) (this.children.index(item) + (this.pages.active * this.grid.n_columns * this.grid.n_rows)))["desktop_file"]).launch (null, null);
-                        this.destroy();
                     } catch (GLib.Error e) {
                         stdout.printf("Error! Load application: " + e.message);
                     }

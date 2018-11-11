@@ -1,26 +1,26 @@
-Para instalar Slingscold desde el codigo fuente, necesita compilarlo:.
+To install Slingscold from source, you need to compile it:
 
-== Compilacion ==
+== Compiling from source ==
 
-+ Primero, necesitamos una carpeta para construirlo:
-    mkdir build
-    cd build
-+ Entonces, configuramos con CMake:
-    cmake ..
-    Aqui puedes obtener algunos errores si no tienes todas las dependencias. 
-    (vease el archivo debian/control, en la seccion "build-depends")
-- Compilelo:
-    make
-    Puede usar "make -j3" si tiene un miroprocesador dual core. (esto lo hara mas rapido)
++ First, create a build directory and cd into it:
+     mkdir build
+     cd build
++ Then, we configure with CMake:
+     cmake ..
+     Here you can get some errors if you do not have all the dependencies.
+     (see the PKGBUILD file or the debian/control file)
+- Compile it:
+     make
+     You can use "make -j3" if you have a dual core processor. (this will make it faster)
 
-== Ejecutar Slingscold ==
+== Execute Slingscold ==
 
-- Para ejecutar slingscold:
-    ./slingscold
+- To run slingscold:
+     ./slingscold
 
-== Instalando Slingscold ==
+== Installing Slingscold ==
 
-- Con permisos de administrador use:
-    make install
-    O:
-    sudo make install
+- As root, run:
+     make install
+     OR:
+     sudo make install

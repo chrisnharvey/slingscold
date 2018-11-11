@@ -269,6 +269,9 @@ public class SlingshotWindow : ElementaryWidgets.CompositedWindow {
     // Keyboard shortcuts
     public override bool key_press_event (Gdk.EventKey event) {
         switch (Gdk.keyval_name (event.keyval)) {
+
+            case "Escape":
+                return true;
         
             case "ISO_Left_Tab":
                 this.page_left ();
